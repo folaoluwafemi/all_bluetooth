@@ -1,6 +1,6 @@
 part of "package:all_bluetooth/all_bluetooth.dart";
 
-final class ConnectionResult {
+class ConnectionResult {
   /// This boolean tells us whether the connection was successful or not
   final bool state;
 
@@ -12,6 +12,7 @@ final class ConnectionResult {
   /// This is the bluetooth device that we get when we have a successful connection.
   /// If our bluetooth connection wasn't successful, then null will be returned
   final BluetoothDevice? device;
+
   ConnectionResult({
     required this.state,
     required this.response,
@@ -41,6 +42,7 @@ final class ConnectionResult {
       state: status,
     );
   }
+
   @override
   String toString() =>
       'ConnectionStatus(state: $state, response: $response, device: $device)';
